@@ -446,9 +446,9 @@ app.post('/api/hawashat', async (req, res) => {
     }
 });
 
-// تشغيل الخادم
+// تشغيل الخادم (تم ضبط أقواس الإغلاق هنا بشكل صحيح تماماً)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {
     await initDatabaseAndSeed();
-    console.log(`النظام يعمل بكامل طاقته على البورت ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
